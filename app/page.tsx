@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { BlogLayout } from "@/components/BlogLayout";
 import { getVisiblePosts } from "@/lib/posts";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Latest Posts",
+    description: "Notion CMS에서 가져온 최신 기술 글 목록입니다.",
+    alternates: { canonical: "/" },
+};
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;

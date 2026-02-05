@@ -2,6 +2,9 @@ import Link from "next/link";
 import { BlogLayout } from "@/components/BlogLayout";
 import { getVisiblePosts } from "@/lib/posts";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 function formatDate(iso?: string) {
     if (!iso) return "—";
     return new Date(iso).toLocaleDateString("ko-KR", {
